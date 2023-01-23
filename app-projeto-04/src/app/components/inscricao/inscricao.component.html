@@ -1,0 +1,19 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Nome Candidato</th>
+            <th scope="col">Vaga</th>
+            <th scope="col">Empresa</th>
+            <th scope="col">Data de Inscrição</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th *ngFor="let i of inscricoes">
+            <td>{{i.nomcandidato}}</td>
+            <td>{{i.titulo_vaga}}</td>
+            <td>{{i.nomeempresa}}</td>
+            <td>{{i.datainscricao}}</td>
+        </tr>
+    </tbody>
+</table>
