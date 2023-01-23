@@ -5,12 +5,12 @@ namespace ProjetoVaga2.DataAccess
 {
     public class EscolaridadeDao : Dao
     {
-        public IEnumerable<Escolaridade> ListarEscolaridade()
+        public IEnumerable<Vizualizar> ListarEscolaridade()
         {
             try
             {
                 AbrirConexao();
-                return Conn.Query<Escolaridade>("SELECT * FROM tb_escolaridade");
+                return Conn.Query<Vizualizar>("SELECT * FROM tb_escolaridade");
             }
             finally
             {

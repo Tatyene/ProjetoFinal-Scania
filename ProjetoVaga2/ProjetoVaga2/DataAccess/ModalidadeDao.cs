@@ -5,12 +5,12 @@ namespace ProjetoVaga2.DataAccess
 {
     public class ModalidadeDao : Dao
     {
-        public IEnumerable<Modalidade> ListarModalidades()
+        public IEnumerable<Vizualizar> ListarModalidades()
         {
             try
             {
                 AbrirConexao();
-                return Conn.Query<Modalidade>("SELECT * FROM tb_modalidade;");
+                return Conn.Query<Vizualizar>("SELECT * FROM tb_modalidade;");
             }
             finally
             {

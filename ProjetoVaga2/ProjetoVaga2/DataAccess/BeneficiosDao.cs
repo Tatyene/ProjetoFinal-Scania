@@ -5,12 +5,12 @@ namespace ProjetoVaga2.DataAccess
 {
     public class BeneficiosDao : Dao
     {
-        public IEnumerable<Beneficios> ListarBeneficios()
+        public IEnumerable<Vizualizar> ListarBeneficios()
         {
             try
             {
                 AbrirConexao();
-                return Conn.Query<Beneficios>("SELECT * FROM tb_beneficio");
+                return Conn.Query<Vizualizar>("SELECT * FROM tb_beneficio");
             }
             finally
             {

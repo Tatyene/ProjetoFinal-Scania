@@ -27,6 +27,16 @@ namespace ProjetoVaga2.Controllers
         public VagasDTO GetVagas(int id)
         {
             return vagasDao.Buscar(id);
+            
+            //try
+            //{
+                
+            //}
+            //catch (Exception e)
+            //{
+
+            //    return BadRequest(e.Message);
+            //}
         }
         //Deleta Vaga / ok testado no postman 23/01
         [HttpDelete("{id}")]

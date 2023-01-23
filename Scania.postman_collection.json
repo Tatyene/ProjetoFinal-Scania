@@ -1,0 +1,642 @@
+{
+	"info": {
+		"_postman_id": "b19d85aa-42b2-4150-8897-d899d1fd717f",
+		"name": "Scania",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Vagas",
+			"item": [
+				{
+					"name": "Vag - Insert Vagas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"idempresa\": 3,\r\n    \"idturno\": 3,\r\n    \"idmodalidade\": 2,\r\n    \"idescolaridade\": 3,\r\n    \"titulo_vaga\": \"Validação de insert no postman em 23/01/2023\",\r\n    \"descricao\": \"Validar postman novamente\",\r\n    \"salario\": 1500.00,\r\n    \"data_limite_inscricao\": \"2023-05-10\",\r\n    \"quantidade_vaga\": 9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5027/api/vagas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"vagas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vag - Detete Vaga",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5027/api/vagas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"vagas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vag - Atualizar Vaga",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idempresa\": 1,\r\n    \"idturno\": 2,\r\n    \"idmodalidade\": 3,\r\n    \"idescolaridade\": 8,\r\n    \"titulo_vaga\": \"Atualizacao via Postman\",\r\n    \"descricao\": \"Validar postman\",\r\n    \"salario\": 15000,\r\n    \"quantidade_vaga\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5027/api/vagas/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"vagas",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vag - Get vagas por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5027/api/vagas/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"vagas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vag - Listar Vagas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5027/api/vagas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"vagas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enum - Beneficios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5027/api/enumvaga/beneficios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"enumvaga",
+								"beneficios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enum - Turnos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5027/api/enumvaga/turno",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"enumvaga",
+								"turno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enum - Escolaridade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5027/api/enumvaga/escolaridade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"enumvaga",
+								"escolaridade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enum - Modalidades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5027/api/enumvaga/modalidade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"enumvaga",
+								"modalidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bene - Deleta Beneficio da Vaga por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5027/api/beneficios/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"beneficios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bene - Inclui beneficio na vaga",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"{\r",
+									"    \"idvaga\": 3,\r",
+									"    \"idbeneficio\": 6\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idvaga\": 2,\r\n    \"idbeneficio\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5027/api/beneficios/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"beneficios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bene - Atualiza beneficio da vaga por id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idbeneficio\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5027/api/beneficios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"beneficios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bene - Lista os beneficios que uma vaga possui",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5027/api/beneficios/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"beneficios",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inscrições",
+			"item": [
+				{
+					"name": "Insc - Inscrição por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5169/api/inscricoes/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5169",
+							"path": [
+								"api",
+								"inscricoes",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insc - Lista de inscrições",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5169/api/inscricoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5169",
+							"path": [
+								"api",
+								"inscricoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insc - Lista das vagas que um candidato de inscreveu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5169/api/inscricoes/candidatovaga/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5169",
+							"path": [
+								"api",
+								"inscricoes",
+								"candidatovaga",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insc - Lista dos candidatos que uma vaga recebeu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5169/api/inscricoes/vagacandidato/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5169",
+							"path": [
+								"api",
+								"inscricoes",
+								"vagacandidato",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insc - Inscrição de candidato vaga",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idcandidato\":1,\r\n    \"idvaga\": 3    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5169/api/inscricoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5169",
+							"path": [
+								"api",
+								"inscricoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insc - Deletar inscrição",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5169/api/inscricoes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5169",
+							"path": [
+								"api",
+								"inscricoes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cand - Lista de candidatos geral",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5169/api/candidatos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5169",
+							"path": [
+								"api",
+								"candidatos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cand - Candidato por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5169/api/candidatos/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5169",
+							"path": [
+								"api",
+								"candidatos",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vag - Lista de vagas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5169/api/vagas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5169",
+							"path": [
+								"api",
+								"vagas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vag - Lista de tudo da vaga por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5169/api/vagas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5169",
+							"path": [
+								"api",
+								"vagas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vag - Lista de empresas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5169/api/vagas/empresa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5169",
+							"path": [
+								"api",
+								"vagas",
+								"empresa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vag - Lista de vagas disponiveis de uma empresa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5169/api/vagas/empresa/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5169",
+							"path": [
+								"api",
+								"vagas",
+								"empresa",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vag - Listar vaga por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5027/api/vagas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5027",
+							"path": [
+								"api",
+								"vagas",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

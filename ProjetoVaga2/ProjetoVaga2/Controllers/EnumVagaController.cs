@@ -23,25 +23,25 @@ namespace ProjetoVaga2.Controllers
         }
         //Lista os benefícios
         [HttpGet("beneficios")]
-        public IEnumerable<Beneficios> GetBeneficios()
+        public IEnumerable<Vizualizar> GetBeneficios()
         {
             return beneficiosDao.ListarBeneficios();
         }
         //Lista a escolaridade
         [HttpGet("escolaridade")]
-        public IEnumerable<Escolaridade> GetEscolaridades()
+        public IEnumerable<Vizualizar> GetEscolaridades()
         {
             return escolaridadeDao.ListarEscolaridade();
         }
         //Lista os turnos
         [HttpGet("turno")]
-        public IEnumerable<Turno> GetTurnos()
+        public IEnumerable<Vizualizar> GetTurnos()
         {
             return turnoDao.ListarTurno();
         }
         //Lista a modalidade
         [HttpGet("modalidade")]
-        public IEnumerable<Modalidade> GetModalidades()
+        public IEnumerable<Vizualizar> GetModalidades()
         {
             return modalidadeDao.ListarModalidades();
         }
