@@ -1,9 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CandidatoEmpresa } from '../interfaces/candidatoEmpresa';
 import { ResumoVaga } from '../interfaces/resumo-vaga';
+import { HttpClient } from '@angular/common/http'
 import { TudoVaga } from '../interfaces/tudo-vaga';
+import { CandidatoEmpresa } from '../interfaces/candidatoEmpresa';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,6 @@ import { TudoVaga } from '../interfaces/tudo-vaga';
 export class VagasService {
 
   constructor(private http: HttpClient) { }
-
   vagasUrl: string = "http://localhost:5169/api/vagas/";
 
   //lista todas as vagas
@@ -24,18 +23,19 @@ export class VagasService {
     return this.http.get<TudoVaga>(this.vagasUrl + id)
   }
 
-  //Pega o resumo de uma vaga
+  //Trás uma lista de empresas
   public GetEmpresa() : Observable<CandidatoEmpresa[]> {
     return this.http.get<CandidatoEmpresa[]>(this.vagasUrl + "empresa")
   }
 
   //Pega uma vaga
   public GetVagas(id: number) : Observable<CandidatoEmpresa> {
-    return this.http.get<CandidatoEmpresa>(this.vagasUrl + "empresa/" + id)
+    const url = `${this.vagasUrl}/${id}`;
+    return this.http.get<CandidatoEmpresa>(url)
   }
 
-  //Resumão da vaga
-  public GetEmpresaVaga(id: number) : Observable<CandidatoEmpresa> {
-    return this.http.get<CandidatoEmpresa>(this.vagasUrl + "vagaempresa/" + id)
+  //Pega a lista de vagas da empresa
+  public GetEmpresaVaga(idempresa: number) : Observable<CandidatoEmpresa[]> {
+    return this.http.get<CandidatoEmpresa[]>(this.vagasUrl + "vagaempresa/" + idempresa)
   }
 }

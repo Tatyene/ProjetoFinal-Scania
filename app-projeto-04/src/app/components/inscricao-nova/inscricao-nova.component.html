@@ -1,0 +1,30 @@
+<div class="borda">
+    <h2 class="text-primary text-center">Realize sua inscrição</h2>
+    <form>
+        <div class="mb-3">
+            <label class="form-label">Candidato</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="candidato">
+                <option value="">Selecione um candidato</option>
+                <option *ngFor="let c of candidatos" [value]="c.id">{{c.nome}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Empresa</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="empresa" #listaempresas (change)="listaVagas(listaempresas.value)">
+                <option value="0">Selecione uma Empresa</option>
+                <option *ngFor="let e of empresas" [value]="e.id">{{e.nome}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Vagas disponíneis</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="vagas">
+                <option value="0" >Selecione uma vaga</option>
+                <option *ngFor="let v of vagas" [value]="v.id">{{v.nome}}</option>
+            </select>
+        </div>
+        <div>
+            <button class="btn btn-primary" (click)="incluir(inscricao)">Realizar inscrição</button> | 
+            <button class="btn btn-secondary" (click)="fechar()">Voltar</button>
+        </div>
+    </form>
+</div>

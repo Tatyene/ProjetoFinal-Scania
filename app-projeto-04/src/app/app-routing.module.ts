@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CandidatoComponent } from './components/candidato/candidato.component';
-import { EmpresaComponent } from './components/empresa/empresa.component';
+import { ErroComponent } from './components/erro/erro.component';
 import { HomeComponent } from './components/home/home.component';
-import { InscricaoComponent } from './components/inscricao/inscricao.component';
+import { InfoVagaComponent } from './components/info-vaga/info-vaga.component';
+import { InscricaoNovaComponent } from './components/inscricao-nova/inscricao-nova.component';
+import { InscricoesComponent } from './components/inscricoes/inscricoes.component';
+import { ListaVagasComponent } from './components/lista-vagas/lista-vagas.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "home", pathMatch: "full"},
-  { path: "inscricoes", component: InscricaoComponent},
-  { path: "candidato", component: CandidatoComponent},
-  { path: "empresa", component: EmpresaComponent},
-  { path: "home", component: HomeComponent}
+  // { path: "", redirectTo: "home", pathMatch: "full"},
+  { path: "", component: HomeComponent},
+  { path: "home", component: HomeComponent}, 
+  { path: "inscricoes", component: InscricoesComponent},
+  { path: "inscricoes/nova", component: InscricaoNovaComponent},
+  { path: "vagas", component: ListaVagasComponent},
+  { path: "vagas/vagainfo/:id", component: InfoVagaComponent},
+  { path: "**", component: ErroComponent}
 ];
 
 @NgModule({

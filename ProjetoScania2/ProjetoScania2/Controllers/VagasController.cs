@@ -44,8 +44,8 @@ namespace ProjetoScania2.Controllers
         {
             return vagasDao.Buscar(id);
         }
-        //resumão vaga
-        //vai receber o id do resumão acima das vagas que aquela empresa possui / ok testado no postman 23/01
+        
+        //vai pegar o id da empresa e trazer uma lista de vagas que ela possui
         [HttpGet("vagaempresa/{id}")]
         public IEnumerable<CandidatoEmpresa> GetEmpresaVaga(int id)
         {

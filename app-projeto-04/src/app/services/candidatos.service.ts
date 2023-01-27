@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'; 
 import { Observable } from 'rxjs';
 import { CandidatoEmpresa } from '../interfaces/candidatoEmpresa';
+import { HttpClient } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,6 @@ import { CandidatoEmpresa } from '../interfaces/candidatoEmpresa';
 export class CandidatosService {
 
   constructor(private http: HttpClient) { }
-  
   candidatoUrl: string = "http://localhost:5169/api/candidatos/"
    
 

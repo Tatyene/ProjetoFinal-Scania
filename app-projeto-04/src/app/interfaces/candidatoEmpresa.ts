@@ -1,4 +1,4 @@
 export interface CandidatoEmpresa {
-    id?: number,
-    nome: string
+    id?: number;
+    nome: string;
 }

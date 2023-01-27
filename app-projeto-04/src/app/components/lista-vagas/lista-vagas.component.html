@@ -1,0 +1,9 @@
+<div class="container center" *ngFor="let v of vagas">
+    <h1>{{v.titulo_vaga}}</h1>
+    <h3>{{v.nomeempresa}}</h3>
+    <p><strong>Salário: </strong>R$ {{v.salario}} </p>
+    <p><strong>Local: </strong>{{v.cidade}} - {{v.uf}} </p>
+    <p><strong>Inscrições até: </strong>{{v.data_limite_inscricao}} </p>
+    <button type="button" class="btn btn-info" routerLink="/vagas/vagainfo/{{v.id}}">Saiba mais</button>
+<hr />
+</div>

@@ -4,25 +4,35 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { InscricaoComponent } from './components/inscricao/inscricao.component';
 import { ErroComponent } from './components/erro/erro.component';
-import { CandidatoComponent } from './components/candidato/candidato.component';
-import { EmpresaComponent } from './components/empresa/empresa.component';
 import { HomeComponent } from './components/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { InscricoesComponent } from './components/inscricoes/inscricoes.component';
+import { InscricoesListaComponent } from './components/inscricoes-lista/inscricoes-lista.component';
+import { InscricaoNovaComponent } from './components/inscricao-nova/inscricao-nova.component';
+import { FormsModule } from '@angular/forms';
+import { ListaVagasComponent } from './components/lista-vagas/lista-vagas.component';
+import { InfoVagaComponent } from './components/info-vaga/info-vaga.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    InscricaoComponent,
     ErroComponent,
-    CandidatoComponent,
-    EmpresaComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent,
+    InscricoesComponent,
+    InscricoesListaComponent,
+    InscricaoNovaComponent,
+    ListaVagasComponent,
+    InfoVagaComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
