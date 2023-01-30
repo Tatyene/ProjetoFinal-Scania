@@ -1,7 +1,6 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>ID</th>
             <th>Nome Candidato</th>
             <th>Vaga</th>
             <th>Empresa</th>
@@ -10,11 +9,10 @@
     </thead>
     <tbody>
         <tr *ngFor="let i of inscricoes">
-            <td>{{i.id}}</td>
-            <td>{{i.nomeCandidato}}</td>
+            <td>{{i.nomecandidato}}</td>
             <td>{{i.titulo_vaga}}</td>
             <td>{{i.nomeempresa}}</td>
-            <td>{{i.datainscricao}}</td>
+            <td>{{i.datainscricao | date : 'dd/MM/yyyy'}}</td>
         </tr>
     </tbody>
 </table>

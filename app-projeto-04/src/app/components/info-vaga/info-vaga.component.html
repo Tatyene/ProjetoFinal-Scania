@@ -1,16 +1,24 @@
-<div>
-    <h2>{{vaga.titulo_vaga}}</h2>
-    <h3>{{vaga.nomeempresa}}</h3>
-    <hr />
-    <p>{{vaga.descricao}}</p>
-    <p><strong>Turno: </strong>{{vaga.turno}}</p>
-    <p><strong>Modalidade: </strong>{{vaga.modalidade}}</p>
-    <p><strong>Escolaridade: </strong>{{vaga.escolaridade}}</p>
-    <p><strong>Salário: </strong>R$ {{vaga.salario}}</p>
-    <p><strong>Local: </strong>{{vaga.cidade}} - {{vaga.uf}} </p>
-    <p><strong>Inscrições até: </strong>{{vaga.data_limite_inscricao}}</p>
-</div>
-    <hr />
-<div>
-    <button class="btn btn-secondary" (click)="fechar()">Voltar</button>
+<div class="container">
+    <div>
+        <h2>{{vaga.titulo_vaga}}</h2>
+        <h3>{{vaga.nomeempresa}}</h3>
+        <hr />
+        <p>{{vaga.descricao}}</p>
+        <p><strong>Turno: </strong>{{vaga.turno}}</p>
+        <p><strong>Modalidade: </strong>{{vaga.modalidade}}</p>
+        <p><strong>Escolaridade: </strong>{{vaga.escolaridade}}</p>
+        <p><strong>Salário: </strong>{{vaga.salario | currency: "BRL"}}</p>
+        <p><strong>Local: </strong>{{vaga.cidade}} - {{vaga.uf}} </p>
+        <p><strong>Inscrições até: </strong>{{vaga.data_limite_inscricao | date : 'dd/MM/yyyy'}}</p>
+    </div>
+        <hr />
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-secondary" (click)="fechar()">Voltar</button>
+            </div>
+            <div class="col">
+                  <a class="btn btn-primary" routerLink="/inscricoes/nova">Inscreva-se</a>
+            </div>
+        </div>
+   
 </div>

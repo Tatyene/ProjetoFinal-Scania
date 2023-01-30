@@ -14,6 +14,10 @@ import { FormsModule } from '@angular/forms';
 import { ListaVagasComponent } from './components/lista-vagas/lista-vagas.component';
 import { InfoVagaComponent } from './components/info-vaga/info-vaga.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+import { SubListaPipe } from './pipes/sub-lista.pipe';
+
+
 
 @NgModule({
   declarations: [
@@ -27,6 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     InscricaoNovaComponent,
     ListaVagasComponent,
     InfoVagaComponent,
+    LoginComponent,
+    SubListaPipe
   ],
   imports: [
     BrowserModule,

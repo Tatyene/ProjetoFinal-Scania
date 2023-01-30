@@ -1,9 +1,18 @@
-<div class="container center" *ngFor="let v of vagas">
-    <h1>{{v.titulo_vaga}}</h1>
-    <h3>{{v.nomeempresa}}</h3>
-    <p><strong>Salário: </strong>R$ {{v.salario}} </p>
-    <p><strong>Local: </strong>{{v.cidade}} - {{v.uf}} </p>
-    <p><strong>Inscrições até: </strong>{{v.data_limite_inscricao}} </p>
-    <button type="button" class="btn btn-info" routerLink="/vagas/vagainfo/{{v.id}}">Saiba mais</button>
-<hr />
-</div>
+<div class="lista">
+    <div>
+      <label class="form-label">Digite a vaga desejada:</label>
+      <input type="text" class="form-control" #busca (keyup)="0" />
+    </div>
+   
+      <div class="card" style="width: 50rem; padding: 1rem;" *ngFor="let v of vagas | sublista:busca.value">
+          <div class="card-body">
+            <h5 class="card-title">{{v.titulo_vaga}}</h5>
+            <h6 class="card-subtitle">{{v.nomeempresa}}</h6>
+            
+            <p class="card-text">Salário: <strong>{{v.salario | currency: "BRL"}}</strong></p>
+            <p class="card-text">Local: <strong>{{v.cidade}} - {{v.uf}}</strong></p>
+            <p class="card-text">Inscrições: <strong>{{v.data_limite_inscricao | date : 'dd/MM/yyyy' }} </strong></p>
+            <a href="#" class="btn btn-primary px-2" routerLink="/vagas/vagainfo/{{v.id}}" >Saiba Mais</a>
+          </div>
+      </div>
+  </div>

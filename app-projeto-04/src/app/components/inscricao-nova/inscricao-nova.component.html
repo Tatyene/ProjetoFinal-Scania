@@ -3,7 +3,7 @@
     <form>
         <div class="mb-3">
             <label class="form-label">Candidato</label>
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="candidato">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="inscricao.idcandidato" name="candidato">
                 <option value="">Selecione um candidato</option>
                 <option *ngFor="let c of candidatos" [value]="c.id">{{c.nome}}</option>
             </select>
@@ -17,7 +17,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Vagas disponíneis</label>
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="vagas">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="inscricao.idvaga" name="vagas">
                 <option value="0" >Selecione uma vaga</option>
                 <option *ngFor="let v of vagas" [value]="v.id">{{v.nome}}</option>
             </select>

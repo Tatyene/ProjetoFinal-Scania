@@ -1,0 +1,77 @@
+.home{
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  background-image: url(../../../assets/banner.jpg);
+  background-position:right;
+  overflow: hidden;
+  background-repeat:inherit;
+
+}
+
+
+
+.banner{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.content{
+  max-width: 100%;
+  position: absolute;
+  
+}
+
+
+/* .img{
+ margin-left: 50px;
+ border-radius: 2px;
+} */
+
+.text-img {
+
+  color:#fff;
+  line-height: 30px;
+  height: 30px; 
+}
+
+.parcerias{
+ 
+  width: 100%;
+  display: flex;
+  height: 260px;
+  padding-top: 60px;
+}
+
+.parcerias-content{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.parcerias-descriprion h2{
+  font-size: 2.5em;
+  text-align: center;
+  border: 1px solid red;
+}
+
+.imagens{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  }
+
+.imagens li{
+  list-style: none;
+}
+
+.img img{
+  width: 80%;
+}
+

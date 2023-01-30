@@ -34,13 +34,13 @@ export class InscricoesService {
   }
 
   //Realizar inscrição
-  public PostInscricao(inscricao: InscricoesVagaVM) : Observable<InscricoesVagaVM> {
-    return this.http.post<InscricoesVagaVM>(this.inscricaoUrl, inscricao)
+  public PostInscricao(inscricao: InscricaoVaga) : Observable<InscricaoVaga> {
+    return this.http.post<InscricaoVaga>(this.inscricaoUrl, inscricao)
   }
 
   //Deletar inscrição
-  public DeletarInscricao(id: number) : Observable<InscricaoVaga> {
+  public DeletarInscricao(id: number) : Observable<InscricoesVagaVM> {
     const url = `${this.inscricaoUrl}/${id}`;
-    return this.http.delete<InscricaoVaga>(url);
+    return this.http.delete<InscricoesVagaVM>(url);
   }
 }

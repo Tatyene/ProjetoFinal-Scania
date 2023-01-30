@@ -1,0 +1,32 @@
+{
+  "apicandidatoporvaga":[
+    {
+    "id":1,
+    "nomeempresa": "SCANIA TRUCKS & BUSES AKTIEBOLAG",
+    "titulo_vaga": "COORDENADOR DE VENDAS",
+    "nomecandidato": "Jemilson Alvez",
+    "datainscricao": "01/01/2023 00:00:00"
+    },
+    {
+      "id":2,
+      "nomeempresa": "SCANIA TRUCKS & BUSES AKTIEBOLAG",
+      "titulo_vaga": "COORDENADOR DE VENDAS",
+      "nomecandidato": "Jemilson Alvez",
+      "datainscricao": "01/01/2023 00:00:00"
+      },
+      {
+        "id":3,
+        "nomeempresa": "SCANIA TRUCKS & BUSES AKTIEBOLAG",
+        "titulo_vaga": "COORDENADOR DE VENDAS",
+        "nomecandidato": "Jemilson Alvez",
+        "datainscricao": "01/01/2023 00:00:00"
+        },
+        {
+          "id":4,
+          "nomeempresa": "SCANIA TRUCKS & BUSES AKTIEBOLAG",
+          "titulo_vaga": "COORDENADOR DE VENDAS",
+          "nomecandidato": "Jemilson Alvez",
+          "datainscricao": "01/01/2023 00:00:00"
+          }
+  ]
+}

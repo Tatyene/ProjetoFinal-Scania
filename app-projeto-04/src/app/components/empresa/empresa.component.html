@@ -1,1 +1,91 @@
-<p>empresa works!</p>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col">
+      Olá empresa, <p>Faça seu login</p>
+      <form>
+        <label>Usuario</label>
+        <input type="text" class="form-control">
+        <label>senha</label>
+        <input type="text" class="form-control">
+      </form>
+      
+    </div>
+    <div class="col">
+      Cadastre-se agora e encontre o <p>melhor candidato para sua vaga!</p>
+      <form>
+        <label>email da empresa</label>
+        <input type="text" class="form-control">
+        <label>senha</label>
+        <input type="text" class="form-control">
+        <label>Confirme a senha</label>
+        <input type="text" class="form-control">
+      </form>
+    </div>
+   
+  </div> -->
+
+  <div class="container">
+   <h4>Olá Impacta,</h4> 
+
+    <p>Estes são os candidatos inscritos em suas vagas</p> 
+    <div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome da Empresa</th>
+            <th>Titulo da Vaga</th>
+            <th>Data da Inscrição</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let v of vagacandidato">
+            <td>{{v.id}}</td>
+            <td>{{v.nomeempresa}}</td>
+            <td>{{v.nomecandidato }}</td>
+            <td>{{v.datainscricao}}</td>
+            <td>
+              <!-- <a routerLink="/clientes/alterar/{{c.id}}"> -->
+                <i class="bi bi-pencil"></i>
+              <!-- </a> &nbsp; -->
+              <!-- <a routerLink="/clientes/remover/{{c.id}}"> -->
+                <i class="bi bi-trash"></i>
+              <!-- </a> -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Estes são os candidatos por vaga</p>
+    <div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome da Empresa</th>
+            <th>Titulo da Vaga</th>
+            <th>Data da Inscrição</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let v of candidatovaga">
+            <td>{{v.id}}</td>
+            <td>{{v.nomeempresa}}</td>
+            <td>{{v.nomecandidato }}</td>
+            <td>{{v.datainscricao}}</td>
+            <td>
+              <!-- <a routerLink="/clientes/alterar/{{c.id}}"> -->
+                <i class="bi bi-pencil"></i>
+              <!-- </a> &nbsp; -->
+              <!-- <a routerLink="/clientes/remover/{{c.id}}"> -->
+                <i class="bi bi-trash"></i>
+              <!-- </a> -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

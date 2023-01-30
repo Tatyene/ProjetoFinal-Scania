@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CandidatoEmpresa } from 'src/app/interfaces/candidatoEmpresa';
-import { InscricoesVagaVM } from 'src/app/interfaces/inscricoes-vaga-vm';
+import { InscricaoVaga } from 'src/app/interfaces/InscricoesVaga';
 import { CandidatosService } from 'src/app/services/candidatos.service';
 import { InscricoesService } from 'src/app/services/inscricoes.service';
 import { VagasService } from 'src/app/services/vagas.service';
@@ -24,6 +24,7 @@ export class InscricaoNovaComponent implements OnInit{
   ngOnInit(): void {
     this.listaCandidatos();
     this.listaEmpresas();
+    this.inscricao = {idcandidato: 0, idvaga: 0};
   }
 
   candidatos!: CandidatoEmpresa[];
@@ -32,7 +33,7 @@ export class InscricaoNovaComponent implements OnInit{
   empresa!: CandidatoEmpresa;
   vagas!: CandidatoEmpresa[];
   vaga!: CandidatoEmpresa;
-  inscricao!: InscricoesVagaVM;
+  inscricao!: InscricaoVaga;
 
   
   fechar(): void {
@@ -49,7 +50,7 @@ export class InscricaoNovaComponent implements OnInit{
       .subscribe(res => this.vagas = res)
   }
 
-  incluir(inscricao: InscricoesVagaVM) : void {
+  incluir(inscricao: InscricaoVaga) : void {
     this.inscricaoService.PostInscricao(inscricao)
       .subscribe(() => this.router.navigate(['inscricoes']));
   }

@@ -1,1 +1,45 @@
-<p>candidato works!</p>
+<div class="container">
+  <p>Olá Sr. Candidato</p>
+  <h3>Você está inscrito nestas vagas:</h3>
+  <div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome da Empresa</th>
+          <th>Titulo da Vaga</th>
+          <th>Data da Inscrição</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let v of candidatovaga">
+          <td>{{v.id}}</td>
+          <td>{{v.nomeempresa}}</td>
+          <td>{{v.nomecandidato }}</td>
+          <td>{{v.datainscricao}}</td>
+          <td>
+            <!-- <a routerLink="/clientes/remover/{{c.id}}"> -->
+              <i class="bi bi-trash"></i>
+            <!-- </a> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+ 
+  <!-- <div class="card" style="width: 50rem; padding: 1rem;" *ngFor="let c of inscricoes">
+    <img src="assets/logo.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{c.titulo_vaga}}</h5>
+      <h6 class="card-subtitle">{{c.nomeempresa}}</h6>
+      <p class="card-text">Inscrições: <strong>{{c.dataInscricao}} </strong></p>
+      <a href="#" class="btn btn-primary px-2" routerLink="/vagacandidato/{{c.id}}" >Saiba Mais</a>
+    </div>
+</div>
+    
+  
+</div> -->
+
