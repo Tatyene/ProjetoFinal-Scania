@@ -12,7 +12,7 @@ namespace ProjetoScania2.DataAccess
             {
                 AbrirConexao();
                 string sql =
-                    "SELECT c.nome AS nomecandidato, v.titulo_vaga, e.nome AS nomeempresa, i.datainscricao FROM tb_candidato c, tb_vaga v, tb_empresa e, tb_inscricao_candidato i ";
+                    "SELECT i.id, c.nome AS nomecandidato, v.titulo_vaga, e.nome AS nomeempresa, i.datainscricao FROM tb_candidato c, tb_vaga v, tb_empresa e, tb_inscricao_candidato i ";
                 if (idcandidato == 0)
                 {
                     return Conn.Query<ListarVagaECandidatoVM>(sql);
@@ -35,7 +35,7 @@ namespace ProjetoScania2.DataAccess
             try
             {
                 string sql =
-                    "SELECT c.nome AS nomecandidato, v.titulo_vaga, e.nome AS nomeempresa,  i.datainscricao FROM tb_candidato c, tb_vaga v, tb_empresa e, tb_inscricao_candidato i ";
+                    "SELECT i.id, c.nome AS nomecandidato, v.titulo_vaga, e.nome AS nomeempresa,  i.datainscricao FROM tb_candidato c, tb_vaga v, tb_empresa e, tb_inscricao_candidato i ";
                 if (idvaga == 0)
                 {
                     return Conn.Query<ListarVagaECandidatoVM>(sql);

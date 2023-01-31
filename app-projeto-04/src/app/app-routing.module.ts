@@ -9,16 +9,18 @@ import { InfoVagaComponent } from './components/info-vaga/info-vaga.component';
 import { InscricaoNovaComponent } from './components/inscricao-nova/inscricao-nova.component';
 import { InscricoesComponent } from './components/inscricoes/inscricoes.component';
 import { ListaVagasComponent } from './components/lista-vagas/lista-vagas.component';
+import { ExcluirInscricaoComponent } from './components/excluir-inscricao/excluir-inscricao.component';
 
 const routes: Routes = [
   // { path: "", redirectTo: "home", pathMatch: "full"},
   { path: "", component: HomeComponent},
   { path: "home", component: HomeComponent}, 
   { path: "inscricoes", component: InscricoesComponent},
-  { path: "inscricoes/nova", component: InscricaoNovaComponent},
+  { path: "inscricoes/nova/:id", component: InscricaoNovaComponent},
   { path: "vagas", component: ListaVagasComponent},
   { path: "vagas/vagainfo/:id", component: InfoVagaComponent},
   { path: "candidato", component: CandidatoComponent},
+  { path: "candidato/remover/:id", component: ExcluirInscricaoComponent},
   { path: "empresa", component: EmpresaComponent},
   { path: "login", component: LoginComponent},
   { path: "**", component: ErroComponent}

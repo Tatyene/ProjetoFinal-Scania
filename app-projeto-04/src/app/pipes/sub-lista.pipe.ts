@@ -10,7 +10,7 @@ export class SubListaPipe implements PipeTransform {
     if(!input){
       return vagas;
     }else {
-      return vagas.filter(c => c.titulo_vaga.toLowerCase().includes(input.toLowerCase()));
+      return vagas.filter(v => v.titulo_vaga.toLowerCase().includes(input.toLowerCase()));
     }
   }
 }

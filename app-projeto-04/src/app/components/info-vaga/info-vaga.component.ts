@@ -20,7 +20,7 @@ export class InfoVagaComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') as string;
-    this.vagasService.MostrarVaga(parseInt(this.id))
+    this.vagasService.mostrarVaga(parseInt(this.id))
       .subscribe(res => this.vaga = res);
   }
 

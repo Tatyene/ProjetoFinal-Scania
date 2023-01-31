@@ -16,6 +16,10 @@ import { InfoVagaComponent } from './components/info-vaga/info-vaga.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { SubListaPipe } from './pipes/sub-lista.pipe';
+import { ExcluirInscricaoComponent } from './components/excluir-inscricao/excluir-inscricao.component';
+import { RouterModule } from '@angular/router';
+import { CandidatoComponent } from './components/candidato/candidato.component';
+import { EmpresaComponent } from './components/empresa/empresa.component';
 
 
 
@@ -31,8 +35,11 @@ import { SubListaPipe } from './pipes/sub-lista.pipe';
     InscricaoNovaComponent,
     ListaVagasComponent,
     InfoVagaComponent,
+    CandidatoComponent,
+    EmpresaComponent,
     LoginComponent,
-    SubListaPipe
+    SubListaPipe,
+    ExcluirInscricaoComponent
   ],
   imports: [
     BrowserModule,

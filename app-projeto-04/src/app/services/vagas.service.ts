@@ -14,28 +14,29 @@ export class VagasService {
   vagasUrl: string = "http://localhost:5169/api/vagas/";
 
   //lista todas as vagas
-  public GetResumoVagas() : Observable<ResumoVaga[]> {
+  public getResumoVagas() : Observable<ResumoVaga[]> {
     return this.http.get<ResumoVaga[]>(this.vagasUrl)
   }
 
   //Busca uma vaga por id
-  public MostrarVaga(id: number) : Observable<TudoVaga> {
+  public mostrarVaga(id: number) : Observable<TudoVaga> {
     return this.http.get<TudoVaga>(this.vagasUrl + id)
   }
 
   //Trás uma lista de empresas
-  public GetEmpresa() : Observable<CandidatoEmpresa[]> {
+  public getEmpresa() : Observable<CandidatoEmpresa[]> {
     return this.http.get<CandidatoEmpresa[]>(this.vagasUrl + "empresa")
   }
 
   //Pega uma vaga
-  public GetVagas(id: number) : Observable<CandidatoEmpresa> {
-    const url = `${this.vagasUrl}/${id}`;
+  public getVagas(id: number) : Observable<CandidatoEmpresa> {
+    const url = `${this.vagasUrl}${id}`;
+    console.log(this.http.get<CandidatoEmpresa>(url));
     return this.http.get<CandidatoEmpresa>(url)
   }
 
   //Pega a lista de vagas da empresa
-  public GetEmpresaVaga(idempresa: number) : Observable<CandidatoEmpresa[]> {
+  public getEmpresaVaga(idempresa: number) : Observable<CandidatoEmpresa[]> {
     return this.http.get<CandidatoEmpresa[]>(this.vagasUrl + "vagaempresa/" + idempresa)
   }
 }

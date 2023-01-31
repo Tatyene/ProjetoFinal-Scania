@@ -13,4 +13,7 @@ export class InscricoesComponent {
   novaInscricao() : void {
     this.router.navigate(['inscricoes/nova']);
   }
+  fechar(): void {
+    this.router.navigate(['/home']);
+  }
 }

@@ -13,7 +13,7 @@ export class ListaVagasComponent implements OnInit{
 
   ngOnInit(): void {
     
-    this.vagasService.GetResumoVagas()
+    this.vagasService.getResumoVagas()
       .subscribe(res => this.vagas = res);
   }
 

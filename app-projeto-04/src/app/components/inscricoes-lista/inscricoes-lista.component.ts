@@ -12,7 +12,7 @@ export class InscricoesListaComponent implements OnInit{
   constructor(private inscricoesService: InscricoesService) {}
   ngOnInit(): void {
    // this.inscricoes = this.inscricoesService.GetInscricao();
-    this.inscricoesService.GetInscricao()
+    this.inscricoesService.getInscricao()
       .subscribe(res => this.inscricoes = res);
   }
   inscricoes: ListarVagaECandidato[] = [];

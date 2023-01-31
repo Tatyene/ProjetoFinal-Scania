@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { InscricoesVagaVM } from '../interfaces/inscricoes-vaga-vm';
 import { ListarVagaECandidato } from '../interfaces/listar-vaga-ecandidato';
 import { HttpClient } from '@angular/common/http'
 import { InscricaoVaga } from '../interfaces/InscricoesVaga';
@@ -14,33 +13,33 @@ export class InscricoesService {
   inscricaoUrl: string = "http://localhost:5169/api/inscricoes/";
 
   //Lista todas as inscrições
-  public GetInscricao() : Observable<ListarVagaECandidato[]> {
+  public getInscricao() : Observable<ListarVagaECandidato[]> {
     return this.http.get<ListarVagaECandidato[]>(this.inscricaoUrl)
   }
 
   //Busca inscrição por id
-  public GetInscricaoId(id: number) : Observable<ListarVagaECandidato> {
+  public getInscricaoId(id: number) : Observable<ListarVagaECandidato> {
     return this.http.get<ListarVagaECandidato>(this.inscricaoUrl + id)
   }
 
   //Busca as vagas que o candidato se inscreveu
-  public GetCandidatoVaga(id: number) : Observable<ListarVagaECandidato[]> {
+  public getCandidatoVaga(id: number) : Observable<ListarVagaECandidato[]> {
     return this.http.get<ListarVagaECandidato[]>(this.inscricaoUrl + "candidatovaga/" + id)
   }
 
   //Busca os candidatos que a vaga recebeu
-  public GetVagaCandidato(id: number) : Observable<ListarVagaECandidato[]> {
+  public getVagaCandidato(id: number) : Observable<ListarVagaECandidato[]> {
     return this.http.get<ListarVagaECandidato[]>(this.inscricaoUrl + "vagacandidato/" + id)
   }
 
   //Realizar inscrição
-  public PostInscricao(inscricao: InscricaoVaga) : Observable<InscricaoVaga> {
+  public postInscricao(inscricao: InscricaoVaga) : Observable<InscricaoVaga> {
     return this.http.post<InscricaoVaga>(this.inscricaoUrl, inscricao)
   }
 
   //Deletar inscrição
-  public DeletarInscricao(id: number) : Observable<InscricoesVagaVM> {
-    const url = `${this.inscricaoUrl}/${id}`;
-    return this.http.delete<InscricoesVagaVM>(url);
+  public deletarInscricao(id: number) : Observable<ListarVagaECandidato> {
+    const url = `${this.inscricaoUrl}${id}`;
+    return this.http.delete<ListarVagaECandidato>(url);
   }
 }
