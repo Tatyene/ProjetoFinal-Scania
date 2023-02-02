@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProjetoScania2.DataAccess;
 using ProjetoScania2.Models;
 using ProjetoScania2.ViewModels;
+using ProjetoVaga2.Models;
 
 namespace ProjetoScania2.Controllers
 {
@@ -12,7 +13,6 @@ namespace ProjetoScania2.Controllers
     {
         ResumoVagaDao resumoVagaDao;
         VagasDao vagasDao;
-
         public VagasController()
         {
             resumoVagaDao = new ResumoVagaDao();
@@ -30,13 +30,7 @@ namespace ProjetoScania2.Controllers
         {
             return resumoVagaDao.Buscar(id);
         }
-        //resumão da empresa
-        //trazer uma lista de empresa que vai passar um id para selecionar as vagas que e aquela empresa possui: usado para inserir a inscrição / ok testado no postman 23/01
-        [HttpGet("empresa")]
-        public IEnumerable<CandidatoEmpresa> GetEmpresa()
-        {
-            return vagasDao.ListarTodos();
-        }
+        
         //resumão vaga
         //vai receber o id do resumão acima das vagas que aquela empresa possui: usado para inserir a inscrição / ok testado no postman 23/01
         [HttpGet("empresa/{id}")]
@@ -50,6 +44,31 @@ namespace ProjetoScania2.Controllers
         public IEnumerable<CandidatoEmpresa> GetEmpresaVaga(int id)
         {
             return vagasDao.BuscarVagaId(id);
+        }
+
+        [HttpGet("vaga/{id}")]
+        public Vagas GetVaga(int id)
+        {
+            return vagasDao.BuscarVagaApi(id);
+        }
+        //Deleta Vaga / ok testado no postman 23/01
+        [HttpDelete("{id}")]
+        public bool DeletarVaga(int id)
+        {
+            return vagasDao.RemoverVaga(id);
+        }
+
+        //Atualiza a vaga / ok testado no postman 23/01
+        [HttpPut("{id}")]
+        public Vagas AlterarVagas(Vagas vagas)
+        {
+            return vagasDao.Alterar(vagas);
+        }
+        //Realiza o cadastro da vaga / ok testado no postman 23/01
+        [HttpPost]
+        public Vagas? PostVagas(Vagas vagas)
+        {
+            return vagasDao.Incluir(vagas);
         }
     }
 }

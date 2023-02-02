@@ -4,6 +4,7 @@ import { ResumoVaga } from '../interfaces/resumo-vaga';
 import { HttpClient } from '@angular/common/http'
 import { TudoVaga } from '../interfaces/tudo-vaga';
 import { CandidatoEmpresa } from '../interfaces/candidatoEmpresa';
+import { Vagas } from '../classes/vagas';
 
 @Injectable({
   providedIn: 'root'
@@ -28,15 +29,26 @@ export class VagasService {
     return this.http.get<CandidatoEmpresa[]>(this.vagasUrl + "empresa")
   }
 
-  //Pega uma vaga
-  public getVagas(id: number) : Observable<CandidatoEmpresa> {
-    const url = `${this.vagasUrl}${id}`;
-    console.log(this.http.get<CandidatoEmpresa>(url));
-    return this.http.get<CandidatoEmpresa>(url)
-  }
-
   //Pega a lista de vagas da empresa
   public getEmpresaVaga(idempresa: number) : Observable<CandidatoEmpresa[]> {
     return this.http.get<CandidatoEmpresa[]>(this.vagasUrl + "vagaempresa/" + idempresa)
+  }
+  //Busca a vaga por id 
+  public getVagaIdApi(id: number) : Observable<Vagas> {
+    return this.http.get<Vagas>(this.vagasUrl + "vaga/" + id);
+  }
+  //Deleta Vaga / 
+  public deletarVaga(id: number) : Observable<Vagas> {
+    const url = `${this.vagasUrl}${id}`;
+    return this.http.delete<Vagas>(url);
+  }
+  //Atualiza a vaga / 
+  public alterarVaga(vaga: Vagas, id: number) : Observable<Vagas> {
+    const url = `${this.vagasUrl}${id}`;
+    return this.http.put<Vagas>(url, vaga);
+  }
+  //Realiza o cadastro da vaga / 
+  public postVaga(vaga: Vagas) : Observable<Vagas> {
+    return this.http.post<Vagas>(this.vagasUrl, vaga);
   }
 }

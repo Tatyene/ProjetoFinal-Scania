@@ -20,6 +20,9 @@ import { ExcluirInscricaoComponent } from './components/excluir-inscricao/exclui
 import { RouterModule } from '@angular/router';
 import { CandidatoComponent } from './components/candidato/candidato.component';
 import { EmpresaComponent } from './components/empresa/empresa.component';
+import { AtualizarVagaComponent } from './components/atualizar-vaga/atualizar-vaga.component';
+import { InserirVagaComponent } from './components/inserir-vaga/inserir-vaga.component';
+import { RemoverVagaComponent } from './components/remover-vaga/remover-vaga.component';
 
 
 
@@ -39,7 +42,10 @@ import { EmpresaComponent } from './components/empresa/empresa.component';
     EmpresaComponent,
     LoginComponent,
     SubListaPipe,
-    ExcluirInscricaoComponent
+    ExcluirInscricaoComponent,
+    AtualizarVagaComponent,
+    InserirVagaComponent,
+    RemoverVagaComponent
   ],
   imports: [
     BrowserModule,

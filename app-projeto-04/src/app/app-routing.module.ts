@@ -10,6 +10,9 @@ import { InscricaoNovaComponent } from './components/inscricao-nova/inscricao-no
 import { InscricoesComponent } from './components/inscricoes/inscricoes.component';
 import { ListaVagasComponent } from './components/lista-vagas/lista-vagas.component';
 import { ExcluirInscricaoComponent } from './components/excluir-inscricao/excluir-inscricao.component';
+import { InserirVagaComponent } from './components/inserir-vaga/inserir-vaga.component';
+import { RemoverVagaComponent } from './components/remover-vaga/remover-vaga.component';
+import { AtualizarVagaComponent } from './components/atualizar-vaga/atualizar-vaga.component';
 
 const routes: Routes = [
   // { path: "", redirectTo: "home", pathMatch: "full"},
@@ -17,6 +20,9 @@ const routes: Routes = [
   { path: "home", component: HomeComponent}, 
   { path: "inscricoes", component: InscricoesComponent},
   { path: "inscricoes/nova/:id", component: InscricaoNovaComponent},
+  { path: "vaga/inserir", component: InserirVagaComponent},
+  { path: "vaga/remover/:id", component: RemoverVagaComponent},
+  { path: "vaga/atualizar/:id", component: AtualizarVagaComponent},
   { path: "vagas", component: ListaVagasComponent},
   { path: "vagas/vagainfo/:id", component: InfoVagaComponent},
   { path: "candidato", component: CandidatoComponent},

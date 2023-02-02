@@ -1,0 +1,61 @@
+<div class="borda">
+    <h2 class="text-primary text-center">Nova Vaga</h2>
+    <form>
+        <div class="mb-3">
+            <label class="form-label">Empresa: </label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" 
+                [(ngModel)]="vaga.idempresa" name="empresa">
+                <option value="">Selecione a Empresa</option>
+                <option *ngFor="let emp of empresas" [value]="emp.id">{{emp.nome}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Vaga:</label>
+            <input type="text" class="form-control" name="vaga" [(ngModel)]="vaga.titulo_vaga">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Descrição:</label>
+            <input type="text" class="form-control" name="descricao" [(ngModel)]="vaga.descricao">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Turno: </label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" 
+                [(ngModel)]="vaga.idturno" name="turno">
+                <option value="">Selecione um Turno</option>
+                <option *ngFor="let t of turnos" [value]="t.id">{{t.descricao}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Modalidade: </label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="modalidade" 
+                [(ngModel)]="vaga.idmodalidade">
+                <option value="">Selecione uma Modalidade</option>
+                <option *ngFor="let m of modalidades" [value]="m.id">{{m.descricao}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Escolaridade</label>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="escolaridade" 
+                [(ngModel)]="vaga.idescolaridade">
+                <option value="">Selecione uma Escolaridade</option>
+                <option *ngFor="let e of escolaridades" [value]="e.id">{{e.descricao}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Salario:</label>
+            <input type="text" class="form-control" name="salario" [(ngModel)]="vaga.salario">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Data limite para inscrição:</label>
+            <input type="date" class="form-control" name="data_limite_inscricao" [(ngModel)]="vaga.data_limite_inscricao">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Quantidade de Vagas:</label>
+            <input type="number" class="form-control" name="quantidade_vaga" [(ngModel)]="vaga.quantidade_vaga">
+        </div>
+        <div>
+            <button class="btn btn-primary" (click)="incluir(vaga)">Incluir Vaga</button> | 
+            <button class="btn btn-secondary" (click)="fechar()">Voltar</button>
+        </div>
+    </form>
+</div>

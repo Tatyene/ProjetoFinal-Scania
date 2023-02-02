@@ -6,6 +6,8 @@ import { VagasService } from 'src/app/services/vagas.service';
 import { CandidatoEmpresa } from 'src/app/interfaces/candidatoEmpresa';
 import { ListarVagaECandidato } from 'src/app/interfaces/listar-vaga-ecandidato';
 import { InscricoesService } from 'src/app/services/inscricoes.service';
+import { EmpresaService } from 'src/app/services/empresa.service';
+import { Empresa } from 'src/app/classes/empresa';
 
 @Component({
   selector: 'app-empresa',
@@ -16,7 +18,7 @@ export class EmpresaComponent implements OnInit{
 
   constructor(
     private router: Router,
-    private empresaServices: VagasService,
+    private empresaServices: EmpresaService,
     private vagaServices: VagasService,
     private inscricaoServices: InscricoesService
     ){}
@@ -25,8 +27,8 @@ export class EmpresaComponent implements OnInit{
     this.listaEmpresas();
   }
 
-  empresas!: CandidatoEmpresa[];
-  empresa!: CandidatoEmpresa;
+  empresas!: Empresa[];
+  empresa!: Empresa;
   vagas!: CandidatoEmpresa[];
   vagas2!: ListarVagaECandidato[];
   vaga!: CandidatoEmpresa;
@@ -35,8 +37,8 @@ export class EmpresaComponent implements OnInit{
     this.router.navigate(['/home']);
   }
   
-  listaEmpresas(): void {
-    this.empresaServices.getEmpresa()
+  listaEmpresas() : void {
+    this.empresaServices.getEmpresas()
       .subscribe(res => this.empresas = res)
   }
 

@@ -13,6 +13,8 @@
             <p class="card-text">Local: <strong>{{v.cidade}} - {{v.uf}}</strong></p>
             <p class="card-text">Inscrições: <strong>{{v.data_limite_inscricao | date : 'dd/MM/yyyy' }} </strong></p>
             <a href="#" class="btn btn-primary px-2" routerLink="/vagas/vagainfo/{{v.id}}" >Saiba Mais</a>
+            <a class="btn btn-danger" routerLink="/vaga/remover/{{v.id}}">Remover Vaga</a>
+            <a class="btn btn-light" routerLink="/vaga/atualizar/{{v.id}}">Atualizar Vaga</a>
           </div>
       </div>
-  </div>
+</div>
