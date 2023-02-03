@@ -1,9 +1,6 @@
 <div class="container">
-  <p>Olá Sr. Candidato</p>
-  <h3>Você está inscrito nestas vagas:</h3>
-  <div>
-    <button class="btn btn-secondary" (click)="fechar()">Voltar</button>
-  </div>
+  <h4 class="title-text">Olá Sr. Candidato</h4>
+  
   <div class="mb-3">
     <label class="form-label">Candidato</label>
     <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="candidatos" #listaCandidatos (change)="listarInscricoes(listaCandidatos.value)">
@@ -34,4 +31,7 @@
         </tr>
       </tbody>
     </table>
+</div>
+<div>
+  <button class="btn btn-warning" (click)="fechar()">Voltar</button>
 </div>

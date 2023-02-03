@@ -1,4 +1,8 @@
 .borda{
   width: 100%;
   padding: 100px;
+  background-color: #111111
+}
+.form-label{
+  color: aliceblue;
 }

@@ -76,8 +76,9 @@ namespace ProjetoScania2.DataAccess
                 {
                     vagas.id = id;
                 }
-                string sql = "UPDATE tb_vaga SET idempresa = @idempresa, idturno = @idturno, idmodalidade = @idmodalidade, idescolaridade = @idescolaridade, titulo_vaga = @titulo_vaga, descricao = @descricao, salario = @salario, data_limite_inscricao = @data_limite_inscricao, quantidade_vaga = @quantidade_vaga ";
-                Conn.Execute(sql, new { vagas.idempresa, vagas.idturno, vagas.idmodalidade, vagas.idescolaridade, vagas.titulo_vaga, vagas.descricao, vagas.salario, vagas.data_limite_inscricao, vagas.quantidade_vaga });
+                string sql = "UPDATE tb_vaga SET idempresa = @idempresa, idturno = @idturno, idmodalidade = @idmodalidade, idescolaridade = @idescolaridade, titulo_vaga = @titulo_vaga, descricao = @descricao, salario = @salario, data_limite_inscricao = @data_limite_inscricao, quantidade_vaga = @quantidade_vaga " +
+                    "where id = @id";
+                Conn.Execute(sql, new { vagas.idempresa, vagas.idturno, vagas.idmodalidade, vagas.idescolaridade, vagas.titulo_vaga, vagas.descricao, vagas.salario, vagas.data_limite_inscricao, vagas.quantidade_vaga, vagas.id });
 
                 return vagas;
 

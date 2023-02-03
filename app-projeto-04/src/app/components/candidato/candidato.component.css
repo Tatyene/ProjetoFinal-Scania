@@ -1,4 +1,20 @@
 .container{
   padding: 100px;
-  background-color: #86ACEF ;
+  background-color: #000000 ;
+}
+
+.title-text{
+  color: #f7f7f7;
+  font-size: 25px;
+}
+
+.form-label{
+  color: #f7f7f7;
+}
+.table th{
+  color: yellow;
+}
+
+.table td{
+  color: #f7f7f7 ;
 }

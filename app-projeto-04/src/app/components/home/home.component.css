@@ -9,8 +9,6 @@
 
 }
 
-
-
 .banner{
   width: 100%;
   height: 500px;
@@ -38,6 +36,21 @@
   color:#fff;
   line-height: 30px;
   height: 30px; 
+  font-size: 60px;
+}
+.quem-somos{
+  background-color: rgb(221, 193, 101);
+  padding: 30px;
+  padding-bottom: 30px;
+  justify-content: center;
+  text-align: center;
+}
+.somos{
+  font-size: 40px;
+}
+
+.text-somos{
+  font-size: 15px;
 }
 
 .parcerias{

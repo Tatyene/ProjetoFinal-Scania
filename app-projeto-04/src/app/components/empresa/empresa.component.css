@@ -1,4 +1,29 @@
 .container{
   padding: 100px;
-  background-color: #1576c4;
+  background-color: #000000;
+}
+.title-text{
+  color: #f7f7f7;
+  font-size: 25px;
+}
+.cadastrar {
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.form-label{
+  color: #f7f7f7
+}
+.text-title2{
+  color: #f7f7f7
+}
+
+.table th{
+  color: yellow;
+}
+
+.table td{
+  color: #f7f7f7 ;
+}
+.row{
+  text-align: center;
 }

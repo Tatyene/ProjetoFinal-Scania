@@ -26,12 +26,36 @@ export class LoginComponent implements OnInit{
     this.router.navigate(['/candidato'])
   }
 
+  alterar(id:string): void{
+    this.router.navigate(['/vaga/atualizar/'+ id])
+  }
+
+  remover(id:string): void{
+    this.router.navigate(['/vaga/remover/' + id])
+  }
+
+  direcionarEmpresa(): void{
+    this.router.navigate(['/empresa'])
+  }
+
+id!: string;
+
   validar(usuario: Usuario): void{
     this.UsuariosService.postUsuarioApi(usuario).subscribe(res => {
       console.log(res);
       if(res){
         this.storage.setItem('user_name', usuario.nome);
-        this.fechar();
+        if(res.nivel == 2){
+          this.direcionarEmpresa();
+          if(res.nivel == 2 ){
+            this.remover(this.id);
+            if(res.nivel == 2){
+              this.alterar(this.id);
+            }
+          }
+        }else{
+          this.fechar();
+        }
       }else{
         this.erro = 'Usuario ou senha inválidos'
       }

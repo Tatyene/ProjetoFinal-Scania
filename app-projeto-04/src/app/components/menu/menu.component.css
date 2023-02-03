@@ -1,18 +1,21 @@
 .navbar {
-    background-color: #ffffff; 
+    background-color: #111111; 
     width: 100%;
     margin: 0 auto;
-   
-
+    height: 60px;
 }
-
+.font-monospace{
+    color: yellow;
+}
+.nav-item a{
+    color: aliceblue;
+}
+.nav-item a:hover{
+    color: yellow;
+}
 .container-fluid{
     max-width: 1100px;
-   
 }
 
-.bi{
-    color: blue;
-}
 
 

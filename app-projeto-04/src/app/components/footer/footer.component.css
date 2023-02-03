@@ -9,7 +9,7 @@ footer{
   max-width: 1200px;
   justify-content: center;
 }
-.text {
+.text{
   color: white;
   text-align: center;
 }
@@ -56,7 +56,7 @@ footer{
 }
 
 #copy-area {
-  background-color: #1576c4;
+  background-color: #111111;
 }
 
 
