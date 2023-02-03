@@ -1,15 +1,14 @@
-.home{
+.home {
   width: 100%;
   display: flex;
   margin: 0 auto;
-  background-image: url(../../../assets/banner.jpg);
-  background-position:right;
-  overflow: hidden;
-  background-repeat:inherit;
-
+  background-image: url(../../../assets/BannerGreatPeople.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
 }
 
-.banner{
+.banner {
   width: 100%;
   height: 500px;
   display: flex;
@@ -18,73 +17,54 @@
   max-width: 1100px;
   margin: 0 auto;
 }
-
-.content{
+.content {
   max-width: 100%;
   position: absolute;
-  
 }
 
-
-/* .img{
- margin-left: 50px;
- border-radius: 2px;
-} */
-
-.text-img {
-
-  color:#fff;
-  line-height: 30px;
-  height: 30px; 
-  font-size: 60px;
+.aboutUs {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 60px;
+  justify-content: space-between;
 }
-.quem-somos{
-  background-color: rgb(221, 193, 101);
-  padding: 30px;
-  padding-bottom: 30px;
-  justify-content: center;
-  text-align: center;
-}
-.somos{
-  font-size: 40px;
+.aboutUs-text {
+  width: 700px;
 }
 
-.text-somos{
-  font-size: 15px;
-}
-
-.parcerias{
- 
+.parcerias {
+  margin-bottom: 40px;
   width: 100%;
   display: flex;
   height: 260px;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
-.parcerias-content{
+.parcerias-content {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.parcerias-descriprion h2{
+.parcerias-descriprion h2 {
   font-size: 2.5em;
   text-align: center;
   border: 1px solid red;
 }
 
-.imagens{
+.imagens {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  }
+}
 
-.imagens li{
+.imagens li {
   list-style: none;
 }
 
-.img img{
+.img img {
   width: 80%;
 }
-

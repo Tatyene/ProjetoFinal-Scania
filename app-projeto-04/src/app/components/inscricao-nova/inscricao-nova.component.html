@@ -1,5 +1,5 @@
 <div class="borda">
-    <h2 class="text-primary text-center">Realize sua inscrição</h2>
+    <h2 class="text-warning text-center">Realize sua inscrição</h2>
     <form>
         <div class="mb-3">
             <label class="form-label">Candidato</label>
@@ -8,11 +8,11 @@
                 <option *ngFor="let c of candidatos" [value]="c.id">{{c.nome}}</option>
             </select>
         </div>
-        <div>
+        <div class="vaga">
             <p> <strong>Vaga: </strong>{{vaga.titulo_vaga}}</p>
         </div>
-        <div>
-            <button class="btn btn-primary" (click)="incluir(inscricao)">Realizar inscrição</button> | 
+        <div class="button">
+            <button class="btn btn-warning" (click)="incluir(inscricao)">Realizar inscrição</button> 
             <button class="btn btn-secondary" (click)="fechar()">Voltar</button>
         </div>
     </form>

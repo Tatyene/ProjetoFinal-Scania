@@ -1,3 +1,21 @@
-.lista{
+.container{
     padding: 100px;
+    background-color: #090909;
+  margin-bottom: 40px;
+}
+.form-label{
+    font-size: 30px;
+}
+
+.input{
+   justify-content: center;
+}
+.card-lista{
+    align-items: center;
+    justify-content: center;
+}
+.card{
+   margin: 10px;
+  background-color: #eae0e0;
+  box-shadow: 3px;
 }

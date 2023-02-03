@@ -1,11 +1,14 @@
-<div>
-    <h2 class="text-primary text-center">Inscrições</h2>
+<div class="container">
+    <h2 class="text-warning text-center">Inscrições</h2>
     <hr />
-    <button class="btn btn-outline-primary" (click)="novaInscricao()">
+    <!-- <button class="btn btn-outline-primary" (click)="novaInscricao()">
         Inscreva-se
-    </button> | 
-    <button class="btn btn-outline-secondary" (click)="fechar()">Voltar</button>
+    </button> |  -->
+   
     <div class="margem-superior">
         <app-inscricoes-lista></app-inscricoes-lista>
+    </div>
+    <div>
+        <button class="btn btn-secondary" (click)="fechar()">Voltar</button>
     </div>
 </div>

@@ -1,7 +1,16 @@
 /*footer*/
 footer{
   padding-top: 60px;
+  background-color: #101010;
   
+}
+img{
+  width: 20px;
+  height: 20px;
+}
+
+.main-title{
+  color:aliceblue
 }
 #contact-area {
  text-align: center;
@@ -30,7 +39,11 @@ footer{
 
 .contact-title {
   font-weight: bold;
-  color: #3ec1d5;
+  color: yellow;
+}
+
+.contact-box{
+  color: #ffffff;
 }
 
 #msg-box p {

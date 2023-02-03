@@ -1,3 +1,13 @@
 .container{
     padding: 100px;
+    background-color: #090909;
+  }
+  h2{
+    color: yellow;
+  }
+  h3{
+    color: #e75a5a;
+  }
+  p{
+    color: #ffffff;
   }

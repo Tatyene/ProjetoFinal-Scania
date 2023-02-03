@@ -1,20 +1,22 @@
-<div class="lista">
+<div class="container">
     <div>
-      <label class="form-label">Digite a vaga desejada:</label>
-      <input type="text" class="form-control" #busca (keyup)="0" />
+      <label class="form-label text-warning">Digite a vaga desejada:</label>
+      <input type="text" class="form-control"  #busca (keyup)="0" />
     </div>
-   
-      <div class="card" style="width: 50rem; padding: 1rem;" *ngFor="let v of vagas | sublista:busca.value">
-          <div class="card-body">
-            <h5 class="card-title">{{v.titulo_vaga}}</h5>
-            <h6 class="card-subtitle">{{v.nomeempresa}}</h6>
-            
-            <p class="card-text">Salário: <strong>{{v.salario | currency: "BRL"}}</strong></p>
-            <p class="card-text">Local: <strong>{{v.cidade}} - {{v.uf}}</strong></p>
-            <p class="card-text">Inscrições: <strong>{{v.data_limite_inscricao | date : 'dd/MM/yyyy' }} </strong></p>
-            <a href="#" class="btn btn-primary px-2" routerLink="/vagas/vagainfo/{{v.id}}" >Saiba Mais</a>
-            <a class="btn btn-danger" routerLink="/login">Remover Vaga</a>
-            <a class="btn btn-light" routerLink="/login">Atualizar Vaga</a>
-          </div>
+   <div class="card-lista">
+    <div class="card" style="width: 69rem; padding: 1rem;" *ngFor="let v of vagas | sublista:busca.value">
+      <div class="card-body">
+        <h5 class="card-title">{{v.titulo_vaga}}</h5>
+        <h6 class="card-subtitle">{{v.nomeempresa}}</h6>
+        
+        <p class="card-text">Salário: <strong>{{v.salario | currency: "BRL"}}</strong></p>
+        <p class="card-text">Local: <strong>{{v.cidade}} - {{v.uf}}</strong></p>
+        <p class="card-text">Inscrições: <strong>{{v.data_limite_inscricao | date : 'dd/MM/yyyy' }} </strong></p>
+        <a href="#" class="btn btn-warning px-2" routerLink="/vagas/vagainfo/{{v.id}}" >Saiba Mais</a> |
+        <a class="btn btn-danger" routerLink="/vaga/remover/{{v.id}}">Remover Vaga</a> |
+        <a class="btn btn-light" routerLink="/vaga/atualizar/{{v.id}}">Atualizar Vaga</a>
       </div>
+  </div>
+   </div>
+     
 </div>

@@ -45,14 +45,8 @@ id!: string;
       console.log(res);
       if(res){
         this.storage.setItem('user_name', usuario.nome);
-        if(res.nivel == 2){
+         if(res.nivel == 2){
           this.direcionarEmpresa();
-          if(res.nivel == 2 ){
-            this.remover(this.id);
-            if(res.nivel == 2){
-              this.alterar(this.id);
-            }
-          }
         }else{
           this.fechar();
         }

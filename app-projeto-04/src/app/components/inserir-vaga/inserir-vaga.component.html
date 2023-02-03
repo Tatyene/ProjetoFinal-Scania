@@ -1,4 +1,4 @@
-<div class="borda">
+<div class="container">
     <h2 class="text-warning text-center">Nova Vaga</h2>
     <form>
         <div class="mb-3">
@@ -54,7 +54,7 @@
             <input type="number" class="form-control" name="quantidade_vaga" [(ngModel)]="vaga.quantidade_vaga">
         </div>
         <div>
-            <button class="btn btn-primary" (click)="incluir(vaga)">Incluir Vaga</button> | 
+            <button class="btn btn-warning" (click)="incluir(vaga)">Incluir Vaga</button> | 
             <button class="btn btn-secondary" (click)="fechar()">Voltar</button>
         </div>
     </form>

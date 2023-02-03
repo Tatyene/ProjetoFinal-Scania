@@ -1,4 +1,8 @@
-.borda{
+.container{
     padding: 100px;
-    background-color: #f1f1f1 ;
+    background-color: #090909 ;
+    margin-bottom: 40px;
+}
+.form-label{
+    color: #ffffff;
 }

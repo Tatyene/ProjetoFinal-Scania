@@ -33,5 +33,4 @@ export class ExcluirInscricaoComponent implements OnInit{
     this.inscricaoService.deletarInscricao(parseInt(this.id))
       .subscribe(() => this.fechar());
   }
-
 }

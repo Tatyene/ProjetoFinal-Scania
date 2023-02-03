@@ -1,3 +1,17 @@
 .borda{
     padding: 100px;
+    background-color: #090909;
 }
+
+.form-label{
+    color: aliceblue;
+}
+
+.vaga, p strong{
+    color: #ffffff;
+}
+
+.btn{
+    margin: 10px;
+}
+

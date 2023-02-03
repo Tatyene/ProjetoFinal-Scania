@@ -25,7 +25,6 @@ import { InserirVagaComponent } from './components/inserir-vaga/inserir-vaga.com
 import { RemoverVagaComponent } from './components/remover-vaga/remover-vaga.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +44,7 @@ import { RemoverVagaComponent } from './components/remover-vaga/remover-vaga.com
     ExcluirInscricaoComponent,
     AtualizarVagaComponent,
     InserirVagaComponent,
-    RemoverVagaComponent
+    RemoverVagaComponent,
   ],
   imports: [
     BrowserModule,
