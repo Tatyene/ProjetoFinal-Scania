@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "IVJu6zdWM/UDi2j+0+WCO58l3gCzHakmbc/woS1XC3x/f07MaH4vJqBXp3dIeYnJkyC2me5BzWhrnngj6DL8Fg==",
+  "dgSpecHash": "buaZ9IdMh+/I0WhpSxIQEO3w5gm6e6P1cKU47exHiu0ZL+V4h4nSr2xcLmV6qud5YvOiLSFs1wd2FMRcTZVGPg==",
   "success": true,
-  "projectFilePath": "C:\\ProjetoAula\\ProjetoScania\\ProjetoScania2\\ProjetoScania2\\ProjetoScania2.csproj",
+  "projectFilePath": "C:\\projeto_final0502\\ProjetoFinal-Scania\\ProjetoScania2\\ProjetoScania2\\ProjetoScania2.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\elorian\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
-    "C:\\Users\\elorian\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\elorian\\.nuget\\packages\\npgsql\\7.0.1\\npgsql.7.0.1.nupkg.sha512",
-    "C:\\Users\\elorian\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\David\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\David\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\David\\.nuget\\packages\\npgsql\\7.0.1\\npgsql.7.0.1.nupkg.sha512",
+    "C:\\Users\\David\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -25,7 +25,7 @@ export class RemoverVagaComponent implements OnInit{
   }
 
   fechar() : void {
-    this.router.navigate(['vaga']);
+    this.router.navigate(['/vagas']);
   }
   remover() : void {
     this.vagaService.deletarVaga(parseInt(this.id))
