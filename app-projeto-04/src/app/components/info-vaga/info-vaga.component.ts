@@ -25,7 +25,7 @@ export class InfoVagaComponent implements OnInit {
   }
 
   fechar() : void {
-    this.router.navigate(['vagas']);
+    this.router.navigate(['/vagas']);
   }
 
 }

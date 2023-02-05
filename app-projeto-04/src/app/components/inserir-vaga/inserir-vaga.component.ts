@@ -35,7 +35,7 @@ export class InserirVagaComponent implements OnInit{
   }
 
   fechar(): void {
-    this.router.navigate(['home']);
+    this.router.navigate(['/home']);
   }
 
   listarEmpresas() : void {
@@ -60,6 +60,6 @@ export class InserirVagaComponent implements OnInit{
 
   incluir(vaga: Vagas) : void {
     this.vagasService.postVaga(vaga)
-      .subscribe(() => this.router.navigate(['vagas']));
+      .subscribe(() => this.router.navigate(['/vagas']));
   }
 }

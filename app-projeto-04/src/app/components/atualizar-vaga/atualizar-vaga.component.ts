@@ -60,7 +60,7 @@ export class AtualizarVagaComponent implements OnInit{
       .subscribe(() => this.fechar());
   }
   fechar() : void {
-    this.router.navigate(['vagas']);
+    this.router.navigate(['/vagas']);
   }
 
 }

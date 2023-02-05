@@ -4,7 +4,7 @@
         <div class="mb-3">
             <label class="form-label">Candidato</label>
             <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="inscricao.idcandidato" name="candidato">
-                <option value="">Selecione um candidato</option>
+                <option value="0">Selecione um candidato</option>
                 <option *ngFor="let c of candidatos" [value]="c.id">{{c.nome}}</option>
             </select>
         </div>
