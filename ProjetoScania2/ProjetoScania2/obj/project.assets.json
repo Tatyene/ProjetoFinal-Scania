@@ -195,24 +195,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\David\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\elorian\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projeto_Final0202\\ProjetoFinal-Scania\\ProjetoScania2\\ProjetoScania2\\ProjetoScania2.csproj",
+      "projectUniqueName": "C:\\ProjetoAula\\ProjetoScania\\ProjetoScania2\\ProjetoScania2\\ProjetoScania2.csproj",
       "projectName": "ProjetoScania2",
-      "projectPath": "C:\\Projeto_Final0202\\ProjetoFinal-Scania\\ProjetoScania2\\ProjetoScania2\\ProjetoScania2.csproj",
-      "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-      "outputPath": "C:\\Projeto_Final0202\\ProjetoFinal-Scania\\ProjetoScania2\\ProjetoScania2\\obj\\",
+      "projectPath": "C:\\ProjetoAula\\ProjetoScania\\ProjetoScania2\\ProjetoScania2\\ProjetoScania2.csproj",
+      "packagesPath": "C:\\Users\\elorian\\.nuget\\packages\\",
+      "outputPath": "C:\\ProjetoAula\\ProjetoScania\\ProjetoScania2\\ProjetoScania2\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\elorian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

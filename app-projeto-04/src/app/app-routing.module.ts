@@ -13,6 +13,9 @@ import { ExcluirInscricaoComponent } from './components/excluir-inscricao/exclui
 import { InserirVagaComponent } from './components/inserir-vaga/inserir-vaga.component';
 import { RemoverVagaComponent } from './components/remover-vaga/remover-vaga.component';
 import { AtualizarVagaComponent } from './components/atualizar-vaga/atualizar-vaga.component';
+import { MulheresComponent } from './components/mulheres/mulheres.component';
+import { LinkedinComponent } from './components/linkedin/linkedin.component';
+import { EntrevistaComponent } from './components/entrevista/entrevista.component';
 
 const routes: Routes = [
   // { path: "", redirectTo: "home", pathMatch: "full"},
@@ -28,6 +31,9 @@ const routes: Routes = [
   { path: "candidato", component: CandidatoComponent},
   { path: "candidato/remover/:id", component: ExcluirInscricaoComponent},
   { path: "empresa", component: EmpresaComponent},
+  { path: "mulheres", component: MulheresComponent},
+  { path: "linkedin", component: LinkedinComponent},
+  { path: "entrevista", component: EntrevistaComponent},
   { path: "login", component: LoginComponent},
   { path: "**", component: ErroComponent}
 ];

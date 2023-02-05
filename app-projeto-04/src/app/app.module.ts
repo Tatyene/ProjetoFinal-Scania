@@ -23,6 +23,9 @@ import { EmpresaComponent } from './components/empresa/empresa.component';
 import { AtualizarVagaComponent } from './components/atualizar-vaga/atualizar-vaga.component';
 import { InserirVagaComponent } from './components/inserir-vaga/inserir-vaga.component';
 import { RemoverVagaComponent } from './components/remover-vaga/remover-vaga.component';
+import { MulheresComponent } from './components/mulheres/mulheres.component';
+import { LinkedinComponent } from './components/linkedin/linkedin.component';
+import { EntrevistaComponent } from './components/entrevista/entrevista.component';
 
 
 @NgModule({
@@ -45,6 +48,9 @@ import { RemoverVagaComponent } from './components/remover-vaga/remover-vaga.com
     AtualizarVagaComponent,
     InserirVagaComponent,
     RemoverVagaComponent,
+    MulheresComponent,
+    LinkedinComponent,
+    EntrevistaComponent
   ],
   imports: [
     BrowserModule,
