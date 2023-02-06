@@ -26,14 +26,6 @@ export class LoginComponent implements OnInit{
     this.router.navigate(['/candidato'])
   }
 
-  alterar(id:string): void{
-    this.router.navigate(['/vaga/atualizar/'+ id])
-  }
-
-  remover(id:string): void{
-    this.router.navigate(['/vaga/remover/' + id])
-  }
-
   direcionarEmpresa(): void{
     this.router.navigate(['/empresa'])
   }
